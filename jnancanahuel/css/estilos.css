@@ -1,0 +1,356 @@
+/* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Desplazamiento suave al hacer clic en los enlaces del menú */
+  :root {
+    scroll-behavior: smooth;
+  }
+  
+  /* CONTENEDOR GENERAL PARA SECCIONES */
+  .contenedor {
+    width: 90%;
+    max-width: 1100px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+  }
+  
+  /* ENCABEZADO - FONDO CON IMAGEN */
+  header {
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(140, 195, 209, 0.5) 0%, rgba(194, 214, 250, 0.5) 100%), url(../images/fondo.jpg);
+    background-repeat: no-repeat; /* corregido 'no-repeate' */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  
+  /* CONTENIDO CENTRAL EN ENCABEZADO */
+  .head {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+  }
+  
+  .hamburger {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: #f2d1fc;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* MENÚ DE NAVEGACIÓN LATERAL */
+  .menu-navegacion {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100%;
+    background-image: linear-gradient(135deg, #da5cb0 0%, #c02a9b 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: translateX(110%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* MENÚ ACTIVO */
+  .spread {
+    transform: translateX(0);
+  }
+  
+  .menu-navegacion a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* TIPOGRAFÍA PRINCIPAL */
+  .titulo {
+    font-size: 60px;
+    margin-bottom: 15px;
+  }
+  
+  .copy {
+    font-weight: 300;
+    font-size: 25px;
+  }
+  
+  /* SECCIÓN: SERVICIOS / PRODUCTOS */
+  .subtitulo {
+    text-align: center;
+    font-weight: 300;
+    color: #e80df0;
+    margin-bottom: 40px;
+    font-size: 40px;
+  }
+  
+  .contenedor-servicio {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .contenedor-servicio img {
+    width: 40%;
+  }
+  
+  .checklist-servicio {
+    width: 45%;
+  }
+  
+  .service {
+    margin-bottom: 20px;
+  }
+  
+  .n-service {
+    margin-bottom: 7px;
+    color: #ab68d1;
+  }
+  
+  .number {
+    display: inline-block;
+    background-image: linear-gradient(to right, #fe4f83 0%, #fe0000 100%);
+    width: 30px;
+    height: 30px;
+    color: #fce7f3;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 30px;
+    margin-right: 5px;
+  }
+  
+  /* SECCIÓN: GALERÍA */
+  .gallery {
+    background: #f2f2f2;
+  }
+  
+  .contenedor-galeria {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  
+  .img-galeria {
+    object-fit: cover;
+    width: 30%;
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+  
+  /* MODAL DE IMÁGENES */
+  .show {
+    transform: translate(0);
+  }
+  
+  .agregar-imagen {
+    object-fit: cover;
+    width: 60%;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform 0.3s 0.2s;
+  }
+  
+  .showImage {
+    transform: scale(1);
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    width: 40px;
+    cursor: pointer;
+  }
+  
+  /* SECCIÓN EXPERTOS */
+  .experts {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .cont-expert {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .cont-expert img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .n-expert {
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 700;
+  }
+  
+  /* PIE DE PÁGINA */
+  footer {
+    background: #d08ab5;
+    padding-bottom: 10px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 60px 0 40px;
+  }
+  
+  .contact-us {
+    width: 40%;
+    color: #fff;
+  }
+  
+  .brand {
+    font-weight: 500;
+    font-size: 40px;
+  }
+  
+  .brand + p {
+    font-weight: 500;
+  }
+  
+  .social-media {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .social-media-icon {
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    transition: 0.3s;
+  }
+  
+  .social-media-icon:hover {
+    background: #fff;
+    color: #f00df0;
+  }
+  
+  .social-media-icon i {
+    font-size: 30px;
+    line-height: 60px;
+  }
+  
+  .line {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 60px;
+  }
+  
+  /* MEDIA QUERIES */
+  
+  /* Tablets */
+  @media screen and (max-width: 800px) {
+    .menu-navegacion {
+      width: 50vw;
+    }
+  
+    .titulo {
+      font-size: 40px;
+    }
+  
+    .contenedor-servicio img {
+      width: 80%;
+      margin-bottom: 40px;
+    }
+  
+    .checklist-servicio {
+      width: 80%;
+    }
+  
+    .agregar-imagen {
+      width: 80%;
+    }
+  
+    .img-galeria {
+      width: 45%;
+    }
+  
+    .cont-expert {
+      width: 80%;
+    }
+  
+    .footer-content {
+      justify-content: center;
+    }
+  
+    .social-media {
+      width: 80%;
+      justify-content: space-evenly;
+    }
+  
+    .contact-us {
+      text-align: center;
+      width: 80%;
+      margin-bottom: 40px;
+    }
+  }
+  
+  /* Móviles */
+  @media screen and (max-width: 500px) {
+    .menu-navegacion {
+      width: 65vw;
+    }
+  
+    .hamburger {
+      top: 20px;
+      right: 20px;
+    }
+  
+    .titulo {
+      font-size: 30px;
+    }
+  
+    .subtitulo {
+      font-size: 30px;
+    }
+  
+    .agregar-imagen,
+    .img-galeria {
+      width: 95%;
+    }
+  
+    .social-media {
+      width: 100%;
+    }
+  
+    .contact-us {
+      width: 90%;
+    }
+  }
+  
